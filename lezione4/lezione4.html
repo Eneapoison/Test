@@ -1,105 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lezione 4</title>
 </head>
+<!--  -->
+
 <body>
-    <h1>Form</h1>
+    <h2>Link YT</h2>
+    <!-- il tag IFRAME inserisce un video da yt per non sovraccaricare il server -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6Vt9S9Xyn1Y" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <h1>Form</h1> <!-- noi stiamo lavorando solo lato client, non lato server, quindi per ora su action aka la pagina di risposta
+        impostiamo qualcosa che darà errore perche il server non lo abbiamo -->
     <form action="inviaDati.php" method="POST" name="contatti">
-        <h2>Contatta l'azienda</h2>
-        <fieldset style="width: 300px;">
-            <legend>Dati Anagrafici</legend>
-            <div>
-                <label for="nominativo">Nominativo:</label>
-                <input type="text" name="nominativo" id="nominativo" tabindex="2" autocomplete="off">
-            </div>
-            <div>
-                <label for="email">E-Mail*:</label>
-                <input type="email" name="email" id="email" tabindex="1" required multiple>
-            </div>
+        <h2>Contatta l'azienda</h2> <!-- dentro il form posso mettere altri titoli -->
+        <fieldset> <!-- il tag FIELDSET è facoltativo e serve per raggruppare dei dati -->
+            <legend>Dati anagrafici</legend> <!-- LEGEND aggiunge un titolo perche di default fieldset è invisibile -->
+            <label for="nominativo">Nominativo:</label>
+            <!-- LABEL serve per estendere lo spazio su cui cliccare per inserire i dati, dentro il FOR contiene l'id dell'oggetto a cui fa riferimento la LABEL -->
+            <input type="text" name="nominativo" id="nominativo">
+            <!-- l'INPUT più comune è il tipo TEXT, in questo caso fa apparire uno spazio su cui scrivere, ID serve per collegare questo input alla LABEL sopra -->
+            <label for="email">E-mail:</label>
+            <input type="text" name="email" id="email">
         </fieldset>
+        <!-- i NAME sono importanti perche poi nel PAYLOAD della pagina appaiono i NAME che dai agli input, non l'ID nè quello che ci scrivi dentro al Label -->
         <fieldset>
-            <legend>Dati di Residenza</legend>
+            <legend>Dati di residenza</legend>
             <label for="indirizzo">Indirizzo:</label>
-            <input type="text" name="indirizzo" id="indirizzo" autofocus>
-            <label for="cap">Cap:</label>
+            <input type="text" name="indirizzo" id="indirizzo"> 
+            <label for="cap">CAP:</label>
             <input type="text" name="cap" id="cap">
             <label for="localita">Località:</label>
+            <!-- se ci sono parole con gli accenti, per evitare di incasinare il codice con caratteri strani lo si inserisce nelle parti tipo ID e NAME senza accento -->
             <input type="text" name="localita" id="localita">
             <label for="provincia">Provincia:</label>
             <input type="text" name="provincia" id="provincia">
         </fieldset>
-        <fieldset>
-            <legend>Dati di Accesso</legend>
-            <label for="username">Username:</label>
-            <input type="text" name="txtUsername" id="username" placeholder="inserisci username" value="" disabled>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password">
-        </fieldset>
-        <div>
-            <textarea name="messaggio" id="messaggio" cols="60" rows="5" ></textarea>
-        </div>
-        <section id="hobbies">
-            <h2>Sports preferiti:</h2>
-            <label for="calcio">calcio</label>
-            <input type="checkbox" name="chkCalcio" id="calcio">
-            <label for="tennis">tennis</label>
-            <input type="checkbox" name="tennis" id="tennis">
-            <label for="basket">basket</label>
-            <input type="checkbox" name="basket" id="basket">
-            <label for="volley">volley</label>
-            <input type="checkbox" name="volley" id="volley">
-        </section>
-        <section id="forma-societaria">
-            <h2>Forma sociale dell'azienda:</h2>
-            <label for="spa">SpA</label>
-            <input type="radio" name="forma-sociale" id="spa" value="1">
-            <label for="srl">Srl</label>
-            <input type="radio" name="forma-sociale" id="srl" value="2">
-            <label for="snc">snc</label>
-            <input type="radio" name="forma-sociale" id="snc" value="3">
-        </section>
-        <section id="dati-nascita">
-            <h2>Estremi certificato di nascita:</h2>
-            <label for="comune-nascita">Comune di Nascita</label>
-            <select name="comune-nascita" id="comune-nascita">
-                <optgroup label="Emilia Romagna">
-                    <option value="Rimini">Rimini</option>
-                    <option value="Forli">Forlì</option>
-                    <option value="Cesena">Cesena</option>
-                </optgroup>
-                <optgroup label="Marche">
-                    <option value="Pesaro">Pesaro</option>
-                    <option value="Urbino">Urbino</option>
-                </optgroup>
-            </select>
-        </section>
-        <fieldset>
-            <legend>Altri Campi</legend>
-            <label for="curriculum">Curriculum Vitae:</label>
-            <input type="file" name="curriculum" id="curriculum">
-            <input type="hidden" name="id-utente" value="">
-            <label for="colore-preferito">Colore Preferito:</label>
-            <input type="color" name="colore-preferito" id="colore-preferito">
-            <label for="mese-preferito">Mese Preferito:</label>
-            <input type="month" name="mese-preferito" id="mese-preferito">
-            <label for="giudizio">Giudizio</label>
-            <input type="number" name="giudizio" id="giudizio" min="1" max="10">
-        </fieldset>
-        <input type="submit" value="Richiedi Informazioni">
-        <input type="reset" value="Annulla Form">
-        <button type="submit">Richiedi Informazioni 2</button>
-        <button type="reset">Annulla Form 2</button>
-        <button id="calcola-cf" type="button">Calcola Codice Fiscale</button>
-<!--
-    Camel Case: chkTennis txtRagioneSociale
-    Pascal Case: Gatto AziendaEstera
-    Snake Case: chk_tennis
-    Kebab Case: chk-tennis
--->
+
+        <input type="submit" value="Richiedi informazioni"> <!-- SUBMIT serve per inviare i dati del form alla pagina di ACTION, posso inserirlo sia come INPUT
+        che come BUTTON, la diff è che INPUT è autochiudente, BUTTON invece devi scriverlo tu -->
+        <button type="submit">Richiedi informazioni (alt)</button>
+
+        <input type="reset" value="Annulla form">
+        <button type="reset">Annulla form (alt)</button>
+        <!-- posso usare i button anche per fargli fare altre cose come resettare il form -->
+
+        <button id="calcola-cf" type="button">Calcola codice fiscale</button>
+        <!-- questo è un comando piu complicato che vedremo su javascript, siccome non abbiamo scritto cosa fa l'ID calcola-cf in java, non farà nulla -->
+
+        <!-- XAMPP è un programma che simula un server web, all'interno della sua cartella htdocs crei diverse cartelle e ci copi gli stessi file .html su cui lavori qui
+        poi vai sul browser e vai sulla pagina LOCALHOST per aprire il file dal server web, apparirà uguale con la differenza che stavolta si appoggia a un server,
+        dando invio dopo aver creato InviaDati.php il form invia i dati al server php, 
+        Se li invii in modalità GET, vedi tutti i dati sull'URL (nome, cognome, etc), 
+        se li invii in modalità POST invece all'interno dell'URL non appaiono piu i tuoi dati, 
+        vengono passati in modo nascosto, tenendo l'URL piu pulito, ma appare il messaggio "conferma reinvio modulo" che è bruttino -->
+        <!-- Dando invio mi appare la pagina di anteprima di quello che stamperò -->
+
     </form>
+
+
 </body>
+
 </html>
