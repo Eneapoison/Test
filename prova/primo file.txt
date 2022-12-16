@@ -1,0 +1,4 @@
+Scrivere una funzione chiamata somma che riceve in input due numeri interi e
+produce in output la somma dei due
+
+funzione somma()
