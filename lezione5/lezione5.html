@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 5</title>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <form action="inviaDati.php" method="GET">
+        <fieldset>
+            <legend>Dati di contatto</legend>
+            <label for="txtCognome">Cognome</label>
+            <input type="text" name="txtCognome" id="txtCognome" placeholder="Inserisci Cognome" <label
+                for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="txtCodiceFiscale">Codice Fiscale</label>
+            <input type="text" name="txtCodiceFiscale" id="txtCodiceFiscale"
+                pattern="/[A-Z]{6}[\d]{2}[A-M][\d]{2}[A-Z 0-9]{4}[A-]/g">
+        </fieldset>
+        <fieldset>
+            <legend>Titolo di studio</legend>
+            <input type="radio" name="radTitoloDiStudio" id="licenzaMedia">
+            <label for="licenzaMedia">Licenza Media</label>
+            <input type="radio" name="radTitoloDiStudio" id="diplomaMaturita">
+            <label for="diplomaMaturita">Diploma Maturità</label>
+            <input type="radio" name="radTitoloDiStudio" id="diplomaIts">
+            <label for="diplomaIts">Diploma ITS</label>
+            <input type="radio" name="radTitoloDiStudio" id="laureaTriennale">
+            <label for="laureaTriennale">Laurea Triennale</label>
+            <input type="radio" name="radTitoloDiStudio" id="laureaMagistrale">
+            <label for="laureaMagistrale">Laurea Magistrale</label>
+            <datalist id="mdrPreferito">
+                <input type="text" name="mdrPreferito" id="mdrPreferito">
+                <label for="mdrPreferito">mdrPreferito</label>
+                <option value="yaohoo">yaohoo</option>
+                <option value="google">google</option>
+                <option value="bing">bing</option>
+                <option value="yandex">yandex</option>
+
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Dati di Residenza</legend>
+            <label for="textCap">Cap</label>
+            <input type="text" name="textCap" id="textCap" pattern="[\d]{5}">
+        </fieldset>
+        <textarea name="commento" id="commento" cols="90" rows="5">consegnare al 2 piano</textarea>
+        <section id="pulsanti">
+            <button type="submit">Invia Dati</button>
+            <input type="reset" value="Reimposta Dati">
+        </section>
+
+    </form>
+</body>
+
+</html>
