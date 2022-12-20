@@ -1,1 +1,86 @@
-ciao mondo
+
+funzione somma(numero1, numero2)
+	
+    //calcolo risultato
+	risultato = numero1 + numero2
+
+	//restituisco il risultato
+	restituisci risultato
+
+fine
+
+funzione maggiore(numero1, numero2)
+	//verifico quale numero è più grande
+	se numero1 > numero2
+	allora
+		risultato = numero1
+	altrimenti
+		risultato = numero2
+	fine se
+
+	//restituisco il risultato
+	restituisci risultato
+fine
+
+funzione controllo(numero1, numero2)
+	//verifico se i numeri sono uguali
+	se numero1 = numero2
+	allora
+		risultato = "uguali"
+	altrimenti
+		risultato = "diversi"
+	fine se
+
+	//restituisco il risultato
+	restituisci risultato
+fine
+
+funzione negativi(numero1, numero2)
+	//inizializzo il risultato
+	risultato = 0
+
+	//se il primo numero è negativo, incremento il risultato
+	se numero1 < 0
+	allora
+		risultato = risultato + 1 
+	fine se
+
+	//se il secondo numero è negativo, incremento il risultato
+	se numero2 < 0
+	allora
+		risultato = risultato + 1 
+	fine se
+
+	//restituisco il risultato
+	restituisci risultato
+fine
+
+funzione negativi(numero1, numero2)
+	//verifico se entrambi i valori sono positivi
+	se numero1 >= 0 e numero2 >= 0
+	allora
+		risultato = 0
+	altrimenti
+		//verifico se entrambi i valori sono negativi
+		se numero1 < 0 e numero2 < 0
+		allora
+			risultato = 2
+		altrimenti
+			risultato = 1
+		fine se
+	fine se
+
+	//restituisco il risultato
+	restituisci risultato
+fine
+
+Scrivi lo pseudocodice della funzione chiamata Calcola, che riceve quattro numeri chiamati 
+a, b, c, d e restituisce il risultato di a*b+c*d 
+
+funzione Calcola(numero1, numero2, numero3, numero4)
+	//calcolo il risultato
+	risultato = numero1 * numero2 + numero3 * numero4 
+
+	//restituisco il risultato
+	restituisci risultato
+fine
