@@ -10,24 +10,27 @@
 
 <body>
     <?php
-    $var1 = "1";
+   // $var1 = "1";
     //echo $var1;
-    $var1 = "stringa";
+    //$var1 = "stringa";
     //echo $var1;
-    $var2 = "pippo";
+    //$var2 = "pippo";
     //echo $var2;
     //echo "$var1 <br> $var2" //sostituisce il nome
     //echo "Ciao a tutti" ;
-    echo ' <br> \' la variabile $var1 = ' . "$var1";
-    echo " <br> simbolo speciale"
+   // echo ' <br> \' la variabile $var1 = ' . "$var1";
+   // echo " <br> simbolo speciale"
 
 
 
     //PER CASA
     //ASSEGNARE AD UNA VARIABILE LA STRINGA "andare a casa"
     //SCRIVERE IN UNA SOLA ECHO
-    //l'insegnamte dice "è ora di" (CONTENUTO DELLA VARIABILE)
+    //l'insegnante dice "è ora di" (CONTENUTO DELLA VARIABILE)
     
+    $var1 = "andare a casa";
+    echo "è ora di &nbsp"; print $var1;
+
     ?>
 </body>
 
