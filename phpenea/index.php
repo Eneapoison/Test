@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?php echo"titolo dinamico php"?>
+        <?php echo "titolo dinamico php" ?>
     </title>
 </head>
 
@@ -14,7 +14,10 @@
     <p>
         Ciao Mondo!!!
         <?php
-        echo "Ciao a tutti quelli dell ultima fila";
+        //commento in linea
+        /*commento delimitato fino alla chiusura*/
+        echo "Ciao a tutti quelli dell' ultima fila";
+        echo date("H:i:s");
         ?>
     </p>
 </body>
