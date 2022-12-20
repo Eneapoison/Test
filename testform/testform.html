@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Prenota la tua stanza</h1>
+
+    <br>
+    <fieldset>
+        <legend>Prenota la tua stanza</legend>
+        <label for="txtCognome">Cognome</label>
+        <input type="text" name="txtCognome" id="txtCognome" placeholder="inserisci il cognome">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required placeholder="Inserisci email">
+        <label for="txtTelefono">Telefono:</label>
+        <input type="Telefono" name="Telefono" id="Telefono" required placeholder="Inserisci numero telefono">
+    </fieldset>
+    <fieldset>
+        <legend>Scegli il giorno</legend>
+        <input type="date" name="Calendario" id="Calendario">
+    </fieldset>
+    <fieldset>
+        <legend>Grandezza stanza</legend>
+        <input type="radio" name="radGrandezza stanza" id="Piccola">
+        <label for="licenzaMedia">Piccola</label>
+        <input type="radio" name="radGrandezza stanza" id="Media">
+        <label for="diplomaMaturita">Media</label>
+        <input type="radio" name="radGrandezza stanza" id="Grande">
+        <label for="diplomaIts">Grande</label>
+        <input type="radio" name="radGrandezza stanza" id="Suite">
+        <label for="Suite">Suite</label>
+    </fieldset>
+    <fieldset>
+        <legend>Dati Personali</legend>
+        <label for="txtCap">Cap:</label>
+        <input type="text" name="txtCap" id="txtCap" pattern="[\d]{5}" required>
+        <label for="numEta">Età:</label>
+        <input type="number" name="numEta" id="numEta" min="18" max="99" step="1">
+    </fieldset>
+    <br>
+    <section id="pulsanti">
+        <button type="submit">Conferma Prenotazione</button>
+        <input type="reset" value="Annulla Prenotazione">
+    </section>
+    
+</body>
+
+</html>
