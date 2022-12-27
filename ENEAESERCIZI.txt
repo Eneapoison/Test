@@ -1,0 +1,23 @@
+funzione confronta (numero1, numero2)
+	//verifico quale numero è più grande
+	se numero1 > numero2
+	allora
+		stampa primo 
+	altrimenti
+		stampa secondo
+	fine se
+
+	//stampo secondo
+	restituisci risultato
+
+funzione moltiplica(numero1, numero2)
+	
+    //calcolo risultato
+	risultato = numero1 x numero2
+
+	//stampa il risultato
+	stampa risultato
+
+fine
+
+
