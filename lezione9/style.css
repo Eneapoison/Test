@@ -1,0 +1,21 @@
+section#articoli > div{
+    width: 33%;
+    height: 80px;
+    border-width:thin;
+    border-style: solid;
+    /* border-top-color: red;
+    border-bottom-color: cadetblue; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 30px;
+}
+input {
+    outline-color: red;
+}
+img{
+    border-radius: 50%;
+    border: 1px solid #333333;
+    padding: 5px;
+}
