@@ -26,9 +26,9 @@
         }
 
         if ($i % 2) {
-            echo "<li style=backround-color:#ccc>$punteggipartecipanti[$i]</b></i></li></p>";
+            echo "<li style=backround-color:#ccc>$punteggipartecipanti[$i]</strong></i></li></p>";
         } else {
-            echo "<li style=backround-color:#fff>$punteggipartecipanti[$i]</b></i></li></p>";
+            echo "<li style=backround-color:#fff>$punteggipartecipanti[$i]</strong></i></li></p>";
         }
         if ($punteggipartecipanti[$i] == 10) {
             $numeropunteggiopieno++;
