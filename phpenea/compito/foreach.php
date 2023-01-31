@@ -11,7 +11,7 @@
 <body>
     <?php
     //$a = []; //inizializo un array vuoto
-    $a = ['mario' => 1, 'giacomo' => 1, 'maria' => 1, 'simone' => 5, 'giuseppe' => 8, 'materia' => 'HTML', 'prof' => ""]; //inizializzazione
+    $a = ['mario' => 10, 'giacomo' => 1, 'maria' => 1, 'simone' => 5, 'giuseppe' => 8, 'materia' => 'HTML', 'prof' => ""]; //inizializzazione
     $a['coordinatore'] = "Sara Forlivesi";
 
     foreach ($a as $chiave => $valore) {
@@ -38,7 +38,7 @@
     //il valore Casadei se la materia è HTML
     if ($a['materia'] == 'database') {
         $a['prof'] = "Rossi";
-    }else if($a['materia']=='HTML'){
+    } else if ($a['materia'] == 'HTML') {
         $a['prof'] = "Casadei";
     }
 
