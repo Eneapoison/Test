@@ -41,14 +41,14 @@
     //         echo $nome . "<br>";
     //     }
     // }
-
+    
     //come si scorre un array monodimensionale (ripasso!!!)
     // $a = [1, 2, 3];
     // for ($i = 0; $i < count($a); $i++) {
     //     $b = $a[$i];
     //     echo $b;
     // }
-
+    
     echo "<hr>";
     //inizio dal punto 2
     $somma = 0;
@@ -124,16 +124,17 @@
     $studenti[] = $nuovo_studente;
 
     $partecipanti_corsi = []; //n. partecipanti ad ogni corso
-
+    
     foreach ($studenti as $studente) {
         //2)
         echo $studente['cognome'] . "<br>";
 
         //3 e 4 prossima volta !
         $nome_corso = $studente['corso'];
-        // if(esiste la chiave $nome_corso)
-        //     $partecipanti_corsi[$nome_corso]++;
-        // else $partecipanti_corsi[$nome_corso]=1;
+        if (array_key_exists($nome_corso, $partecipanti_corsi))
+            $partecipanti_corsi[$nome_corso]++;
+        else
+            $partecipanti_corsi[$nome_corso] = 1;
 
 
     }
