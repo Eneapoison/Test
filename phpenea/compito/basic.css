@@ -1,0 +1,25 @@
+.quadrato {
+	width: 200px;
+	height: 200px;
+	margin-right: 15px;
+}
+
+.bgBianco{
+	background-color: #FFF;
+}
+
+.bgVerde{
+	background-color: #0F0;
+}
+
+.bgRosso{
+	background-color: #F00;
+}
+
+.bgBlu{
+	background-color: #00F;
+}
+
+body{
+	background-color: #FFF;
+}
