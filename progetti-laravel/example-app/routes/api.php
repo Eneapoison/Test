@@ -58,6 +58,15 @@ Route::put('/hotels/{id}', [HotelController::class, 'update']);
 
 
 
+Route::get('/books', 'BookController@index');
+Route::post('/books', 'BookController@store');
+Route::get('/books/{id}', 'BookController@show');
+Route::put('/books/{id}', 'BookController@update');
+Route::delete('/books/{id}', 'BookController@destroy');
+
+
+
+
 
 
 Route::get('/errore-di-prova', [ErrorController::class, 'nullResponse']);
