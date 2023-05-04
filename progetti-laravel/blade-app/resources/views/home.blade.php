@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
+    @include('bootstrap')
 </head>
 <body>
 
-<h1>Home</h1>
+    <div class="container">
 
-<a href="/hotels">Vai all'elenco degli hotel</a>
+        <h1>Home</h1>
+
+        <a href="/hotels">Vai all'elenco degli hotel</a>
+    </div>
 
 </body>
 </html>

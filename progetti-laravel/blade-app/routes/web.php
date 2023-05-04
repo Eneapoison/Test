@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HotelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,4 +38,14 @@ Route::get('/hotels/create', [
 Route::post('/hotels/create', [
         \App\Http\Controllers\HotelController::class,
     'save'
+]);
+
+Route::get('/hotels/edit/{id}', [
+        \App\Http\Controllers\HotelController::class,
+    'edit'
+]);
+
+Route::post('/hotels/edit/{id}', [
+        \App\Http\Controllers\HotelController::class,
+    'update'
 ]);
